@@ -13,7 +13,7 @@ const Navbar = ({ click }) => {
     return (
         <nav className="navbar">
             <div className="navbar__logo">
-                <h2>Gift-For-Him</h2>
+                <Link className='navbar__gfh' to="/"><h2>Gift-For-Him</h2></Link>
             </div>
             <ul className="navbar__links">
                 <li >

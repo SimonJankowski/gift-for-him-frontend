@@ -14,6 +14,10 @@ color:#f4f4f4;
 font-size: 1.4rem;
 cursor:pointer
 }
+.navbar__gfh{
+text-decoration: none;
+}
+
 
 .navbar__links{
 display:flex;

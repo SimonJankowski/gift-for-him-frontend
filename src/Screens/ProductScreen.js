@@ -2,7 +2,7 @@ import './ProductScreen.css';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom' // we dont have access to match in react-router v6 thats why i use this
-
+import Loader from "react-js-loader"
 
 import { getProductDetails } from '../redux/actions/productActions'
 import { addToCart } from '../redux/actions/cartActions'
@@ -31,7 +31,7 @@ const ProductScreen = () => {
     return (
         <div className='productscreen'>
             {loading ? (
-                <h2>put loader here</h2>
+                <Loader className="loader" type="spinner-circle" bgColor={"#171717"} title={"Loading Gifts"} color={'#171717'} size={100} />
             ) : error ? (
                 <h2>{error}</h2>
             ) : (

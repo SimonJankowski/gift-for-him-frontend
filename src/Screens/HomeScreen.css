@@ -14,20 +14,34 @@ color: #171717;
   grid-template-columns: repeat(4, 1fr);
 }
 
+.loader_container{
+grid-column:span 4;
+margin-top: 50px;
+}
+
+
 @media (max-width: 1232px) {
   .homescreen__products {
     grid-template-columns: repeat(3, auto);
   }
+.loader_container{
+grid-column:span 3;
+}
 }
 
 @media (max-width: 950px) {
   .homescreen__products {
     grid-template-columns: repeat(2, auto);
   }
+.loader_container{
+grid-column:span 2;
+}
 }
 
 @media (max-width: 630px) {
   .homescreen__products {
     grid-template-columns: 1fr;
   }
+
 }
+

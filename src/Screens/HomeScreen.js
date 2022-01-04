@@ -4,7 +4,7 @@ import Product from '../components/Product';
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';   // this is to replace mapStateToProps
 import { getProducts as listProducts } from '../redux/actions/productActions'
-
+import Loader from "react-js-loader"
 
 
 const HomeScreen = () => {
@@ -22,7 +22,7 @@ const HomeScreen = () => {
         <div className='homescreen'>
             <h2 className='homescreen__title'> Latest Gifts</h2>
             <div className='homescreen__products'>
-                {loading ? <h2>Add loader here</h2>
+                {loading ? <div className="loader_container"><Loader className="loader" type="spinner-circle" bgColor={"#171717"} title={"Loading Gifts"} color={'#171717'} size={100} /></div>
                     : error ? <h2>{error}</h2>
                         : products.map((p) => (
                             <Product

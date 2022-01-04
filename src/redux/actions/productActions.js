@@ -3,7 +3,7 @@ import axios from 'axios';
 export const getProducts = () => async (dispatch) => {
     try {
         dispatch({ type: 'GET_PRODUCTS_REQUEST' })
-        const { data } = await axios.get("/api/products");
+        const { data } = await axios.get("https://lit-anchorage-68252.herokuapp.com/api/products");
         dispatch({
             type: 'GET_PRODUCTS_SUCCESS',
             payload: data
@@ -22,7 +22,7 @@ export const getProducts = () => async (dispatch) => {
 export const getProductDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: 'GET_PRODUCTS_DETAILS_REQUEST' })
-        const { data } = await axios.get(`/api/products/${id}`);
+        const { data } = await axios.get(`https://lit-anchorage-68252.herokuapp.com/api/products/${id}`);
         dispatch({
             type: 'GET_PRODUCT_DETAILS_SUCCESS',
             payload: data

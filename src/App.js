@@ -17,12 +17,13 @@ const App = () => {
     <BrowserRouter>
       <Navbar click={() => setSideToggle(true)} />
       <SideDrawer show={sideToggle} click={() => setSideToggle(false)} />
-      <Backdrop show={sideToggle} click={() => setSideToggle(false)}/>
+      <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
       <main>
         <Routes>
           <Route path="/" element={<HomeScreen />} />
           <Route path="/product/:id" element={<ProductScreen />} />
           <Route path="/cart" element={<CartScreen />} />
+          <Route path="*" element={<HomeScreen />} />
         </Routes>
       </main>
     </BrowserRouter>
